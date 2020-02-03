@@ -10,7 +10,8 @@
 <style>
 
   :root{
-    --primary-color:#ab88ff;
+    --primary-color:#8f57fd;
+    --text-color: white;
     --gap: 1em;
   }
 
@@ -58,7 +59,7 @@
   }
 
   .header__menu li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
   }
 
@@ -68,7 +69,6 @@
 
   .header__menu--profile {
     margin-right: 8px;
-    /* width: 40px; */
     display: flex;
     align-items: center;
   }
@@ -80,8 +80,34 @@
 
   .header__menu--profile p {
     margin: 0px;
-    color: white;
+    color: var(--text-color);
   }
+
+  .main{
+    height:300px;
+  }
+  .main__title{
+    color: var(--text-color);
+    font-size: 25px;
+  }
+
+  .input{
+    border: 2px solid white;
+    border-radius: 25px;
+    font-family: 'Muli', sans-serif;    
+    color: var(--text-color);
+    font-size: 16px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
+
+  ::placeholder{
+    color: var(--text-color)
+  }
+
 
 </style>
 <body>
@@ -97,9 +123,12 @@
         <li><a href="/">Cerrar Sesión</a></li>
       </ul>
     </div>
-  
   </header>
 
+  <section class="main">
+    <h2 class="main__title">¿Qué quieres ver hoy?</h2>
+    <input class="input" type="text" placeholder="Buscar...">
+  </section>
 
 </body>
 </html>
