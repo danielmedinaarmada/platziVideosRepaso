@@ -65,7 +65,7 @@
     transition: 450ms opacity;
     padding: 10px;
     position: absolute;
-
+    width:100%;
     left:0;
  
     bottom:0;
@@ -79,12 +79,17 @@
     width: 20px;
   }
 
-  .carousel-item__details p {
+  .carousel-item__details--title {
     color: white;
     font-weight: bold;
-    margin: 0;
+    font-size: 9px;
   }
 
+  .carousel-item__details--subtitle {
+    color: white;
+    font-weight: bold;
+    font-size: 8px;
+  }
 
 /* 
 Títulos y los subtitulos
@@ -99,8 +104,8 @@ tambien cuando hacemos hover debemos cambiar la opacity a 1
         <img class="carousel-item__img" src="./img/photo-of-mother-kissing-her-baby-3663038.jpg" alt="Familia">
         <div class="carousel-item__details">
           <div>
-            <img src="./img/icons8-play-64.png" alt="Play">
-            <img src="./img/icons8-más-64.png" alt="Plus">
+            <img src="./icons/icons8-play-64.png" alt="Play">
+            <img src="./icons/icons8-plus-64.png" alt="Plus">
           </div>
           <p class="carousel-item__details--title">Título descriptivo</p>
           <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
@@ -113,5 +118,6 @@ tambien cuando hacemos hover debemos cambiar la opacity a 1
       </div>
     </div>
   </section>
+
 </body>
 </html>
