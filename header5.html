@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> 
-  <title>Carrousel</title>
+  <title>Document</title>
 </head>
 <style>
-
-:root{
-  --background-color: #8f57fd;
-  --text-color: white;
-}
-
+  :root {
+    --background-color: #8f57fd;
+    --color-text: white;
+  } 
+  
   body{
-    margin: 0;
-    font-family: 'Muli', sans-serif;
+    margin: 0px;
     background-color: var(--background-color);
+    font-family: 'Muli', sans-serif;
   }
 
   .header{
@@ -35,11 +34,11 @@
     margin-left: 10px;
   }
 
-  .header__menu{
+  .header__menu {
     margin-right: 30px;
   }
 
-  .header__menu--profile{
+  .header__menu--profile {
     margin-right: 8px;
     display: flex;
     align-items: center;
@@ -50,19 +49,18 @@
     margin-right: 8px;
   }
 
-  .header__menu--profile p {
-    margin: 0;
-    color: var(--text-color);
+  .header__menu--profile p{
+    color: var(--color-text);
+    margin:0;
   }
 
-  .header__menu ul {
-    display: none;
+  .header__menu ul{
+    display:none;
     list-style: none;
-    padding: 0px;    
-    position: absolute;
-    width: 100px;
+    margin: 0 0 0 -14px;;
     text-align: right;
-    margin: 0 0 0 -14px;
+    position: absolute;
+    padding: 0;
   }
 
   .header__menu:hover ul, ul:hover{
@@ -73,39 +71,37 @@
     margin: 10px 0;
   }
 
-  .header__menu ul li a {
+  .header__menu ul li a{
     text-decoration: none;
-    color: var(--text-color);
+    color:var(--color-text);
   }
 
-  .header__menu ul li a:hover{
+  .header__menu:hover ul li a:hover{
     text-decoration: underline;
   }
 
-  .main {
+  .main{
     height: 300px;
   }
 
   .main__title{
-    color: var(--text-color);
+    color: var(--color-text);
     font-size: 25px;
-  } 
+  }
 
   .input{
     border: 2px solid white;
-    border-radius: 60px;
     font-family: 'Muli', sans-serif;
-    color: var(--text-color);
-    font-size: 16px;
+    border-radius: 50px;
+    padding: 0 20px; 
     height: 50px;
-    padding: 0 20px;
     width: 70%;
+    font-size: 16px;
     background-color: rgba(255,255,255,0.1);
-    outline: none;
   }
 
-  ::placeholder{
-    color: var(--text-color);
+  .input::placeholder{
+    color: var(--color-text);
   }
 
   .carousel{
@@ -121,35 +117,35 @@
     padding-bottom: 10px;
   }
 
-  .carousel-item{
-    background-color: coral;
-    width: 200px;
-    height: 250px;
-    border-radius: 20px;
-    overflow: hidden;
-    display: inline-block;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: 450ms all;
-    transform-origin: center left;
-    position: relative;
-  }
-
   .carousel-item:hover ~ .carousel-item{
     transform: translate3d(100px,0,0);
   }
 
   .carousel__container:hover .carousel-item{
-    opacity: 0.3;
+    opacity: 0.30;
   }
 
-  .carousel__container:hover .carousel-item:hover{
+  .carousel__container:hover .carousel-item:hover {
     transform: scale(1.5);
     opacity: 1;
   }
 
   .carousel__container:hover .carousel-item:hover .carousel-item__details{
     opacity: 1;
+  }
+
+  .carousel-item{
+    background-color: coral;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
   }
 
   .carousel-item__img{
@@ -159,7 +155,7 @@
   }
 
   .carousel-item__details{
-    background: linear-gradient(to top, rgba(0,0,0,0.9)0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100% );
     font-size: 10px;
     opacity: 0;
     transition: 450ms opacity;
@@ -170,27 +166,27 @@
     right: 0;
     bottom: 0;
     left: 0;
+
   }
 
-  .carousel-item__details img{
+  .carousel-item__details img {
     width: 20px;
   }
 
   .carousel-item__details--title{
-    color: var(--text-color);
-    font-weight: bold;
+    color: var(--color-text);
     font-size: 9px;
-  }
-  
-  .carousel-item__details--subtitle{
-    color: var(--text-color);
     font-weight: bold;
+  }
+
+  .carousel-item__details--subtitle{
+    color: var(--color-text);
     font-size: 8px;
   }
 
-
 </style>
 <body>
+
   <header class="header">
     <img class="header__img" src="./icons/logo-platzi-video-BW2.png" alt="Logo">
     <div class="header__menu">
@@ -202,10 +198,9 @@
         <li><a href="/">Cuenta</a></li>
         <li><a href="/">Cerrar Sesión</a></li>
       </ul>
-
     </div>
-  </header>  
-
+  </header>
+  
   <section class="main">
     <h2 class="main__title">¿Qué quieres ver hoy?</h2>
     <input class="input" type="text" placeholder="Buscar...">
@@ -214,19 +209,16 @@
   <section class="carousel">
     <div class="carousel__container">
       <div class="carousel-item">
-        <img class="carousel-item__img" src="./img/low-angle-photo-of-woman-wearing-white-dress-3612264.jpg" alt="">
+        <img class="carousel-item__img" src="./img/photo-of-mother-kissing-her-baby-3663038.jpg" alt="snow">
         <div class="carousel-item__details">
           <div>
             <img src="./icons/icons8-play-64.png" alt="Play">
             <img src="./icons/icons8-plus-64.png" alt="Plus">
           </div>
           <p class="carousel-item__details--title">Título descriptivo</p>
-          <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+          <p class="carousel-item__details--subtitle">2019 16+ 144 minutos</p>
         </div>
       </div>
-      <div class="carousel-item"></div>
-      <div class="carousel-item"></div>
-      <div class="carousel-item"></div>
       <div class="carousel-item"></div>
       <div class="carousel-item"></div>
       <div class="carousel-item"></div>

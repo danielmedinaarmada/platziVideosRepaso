@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .caja1{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background: linear-gradient(45deg, blue, red);
+    margin-bottom: 10px;
+  }
+
+  .caja2{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background: linear-gradient(to left bottom , blue, red);
+    margin-bottom: 10px;
+  }
+
+  .caja3{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background: linear-gradient(0deg, blue, green 40%, red);
+    margin-bottom: 10px;
+  }
+
+</style>
+<body>
+  
+<div class="caja1"></div>
+<div class="caja2"></div>
+<div class="caja3"></div>
+
+<!-- 
+Formal grammar: linear-gradient(  [ <angle> | to <side-or-corner> ,]? <color-stop> [, <color-stop>]+ )
+  \---------------------------------/ \----------------------------/
+    Definition of the gradient line         List of color stops  
+
+where <side-or-corner> = [left | right] || [top | bottom]
+and <color-stop>     = <color> [ <percentage> | <length> ]?
+
+linear-gradient( 45deg, blue, red );           /* A gradient on 45deg axis starting blue and finishing red */
+linear-gradient( to left top, blue, red);      /* A gradient going from the bottom right to the top left starting blue and 
+                  finishing red */
+
+linear-gradient( 0deg, blue, green 40%, red ); /* A gradient going from the bottom to top, starting blue, being green after 40% 
+                  and finishing red */ 
+
+-->
+
+<!-- 
+shrink
+evenly
+
+hidden
+enable 
+-->
+
+
+</body>
+</html>
